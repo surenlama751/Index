@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+  <title>Calculator</title>
+  <style>
+  
+    #number {
+      margin-right:5px;
+      height:40px;
+      width:30px;
+    }
+
+    #C{
+      height:40px;
+      width:146px;
+    }
+    #calculate{
+      height:40px;
+      width:30px;
+    }
+
+    #result{
+      height:25px;
+      margin-bottom:10px;
+    }
+  </style>
+</head>
+<body>
+  <div class = "calculator">
+    <tr>
+      <td><input type="text" id = "result" disabled ></td>
+    </tr><br>
+    <tr>
+      <td><input type="button" id = "number" value="1" onClick = "display('1')"></td>
+      <td><input type="button" id = "number" value="2" onClick = "display('2')"></td>
+      <td><input type="button" id = "number" value="3" onClick = "display('3')"></td>
+      <td><input type="button" id = "number" value="/" onClick = "display('/')"></td>
+
+    </tr>
+    <br>
+    <tr>
+      <td><input type="button" id = "number" value="4" onClick = "display('4')"></td>
+      <td><input type="button"id = "number" value="5" onClick = "display('5')"></td>
+      <td><input type="button"id = "number" value="6" onClick = "display('6')"></td>
+      <td><input type="button" id = "number"value="*" onClick = "display('*')"></td>
+    </tr><br>
+    <tr>
+      <td><input type="button"id = "number" value="7" onClick = "display('7')"></td>
+      <td><input type="button" id = "number"value="8" onClick = "display('8')"></td>
+      <td><input type="button"id = "number" value="9" onClick = "display('9')"></td>
+      <td><input type="button"id = "number" value="+" onClick = "display('+')"></td>
+    </tr><br>
+    <tr>
+      <td><input type="button"id = "number" value="0" onClick = "display('0')"></td>
+      <td><input type="button" id = "number"value="." onClick = "display('.')"></td>
+      <td><input type="button"id = "number" value="-" onClick = "display('-')"></td>
+      <td><input type="button" id = "calculate"value="=" onClick = "calculate()"></td>
+    </tr><br>
+    <tr>
+      <td><input type = "button" value = "CLEAR" id = "C" onClick = "clearPath()"></td>
+    </tr>
+  </div>
+
+<script>
+ 
+
+  function display(value){
+    document.getElementById('result').value += value;
+  }
+  
+
+  function calculate(){
+    let p = document.getElementById('result').value;
+    let q = eval(p);
+    document.getElementById('result').value = q;
+  }
+
+  function clearPath(){
+    document.getElementById('result').value = '';
+  }
+</script>
+</body>
+
+
+</html>

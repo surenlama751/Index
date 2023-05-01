@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+  <title>CoinFlip Game</title>
+</head>
+<body>
+  
+  <button onClick = "heads()">Head</button>
+  <button onClick = "tails()">Tail</button><br><br>
+  <p id = "display"></p>
+ 
+
+  <script>
+let result = '';
+function flipCoin(){
+
+  const number = Math.random();
+  if (number > 0.5){
+    result = 'head';
+    console.log(result);
+    
+  }
+  else if (number < 0.5){
+    result = 'tail';
+    console.log(result);
+  }
+  return result;
+}
+
+let finalResult = '';
+function heads(){
+  const finalFlip = flipCoin();
+  if (result === 'head'){
+    finalResult = 'You win';
+  }
+  else if(result === 'tail'){
+    finalResult = 'You lose';
+  }
+  return finalResult;
+}
+
+function tails(){
+  const finalFlip = flipCoin();
+  if (result === 'head'){
+    finalResult = 'You lose';
+  }
+  else if(result === 'tail'){
+    finalResult = 'You win';
+  }
+  return finalResult;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    
+
+
+    
+  
+
+    
+
+
+
+    
+  
+
+
+    
+   
+    
+    
+  </script>
+</body>
+
+</html>

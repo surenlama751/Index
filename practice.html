@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <title>Practice</title>
+</head>
+<body>
+  <button>9a</button>
+  <button onClick = 'change()' class = "js-change-button">9b</button>
+  <button class="heads" onClick="callHead()">heads</button>
+  <button class="tails" onClick="callTail()">tails</button>  
+  <p class = "js-display-heads"></p>
+  <p class = "js-display-tails"></p>
+  <input class="js-input-name"
+  onkeydown = "display(event.key)"
+  
+  
+  >
+  <button onClick="displayName()"
+  >Submit</button>
+  <p class="js-display-name"></p>
+
+
+<script>
+
+function display(event){
+let ok = document.querySelector('.js-display-name');
+
+
+displayName();
+  
+}
+
+
+function displayName(){
+  const inputElement = document.querySelector('.js-input-name');
+
+let name = inputElement.value;
+console.log(name); 
+document.querySelector('.js-display-name')
+.innerHTML = `Your name is: ${name}`;
+
+}
+
+/*function callHead(){
+document.querySelector('.js-display-heads').innerHTML = 'You choose Head';
+
+}
+
+function callTail(){
+document.querySelector('.js-display-tails').innerHTML = 'You choose tail';
+
+}
+
+
+
+  function change(){
+    document.querySelector('.js-change-button')
+      .innerHTML = '9b done!';
+  }
+
+ const a = document.querySelector('button');
+ console.log(a);*/
+</script>  
+</body>
+</html>
